@@ -1,55 +1,56 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: N/A (initial creation) → 1.0.0 (new constitution)
+List of modified principles: N/A (initial creation) → Added 6 core principles
+Added sections: Core Principles (Security First, Source of Truth, Modularity, RAG Protocol Compliance, Testing Excellence, Naming Conventions), Technical Standards, Development Workflow, Governance
+Removed sections: N/A (initial creation)
+Templates requiring updates: ✅ plan-template.md (Constitution Check section will now reference new principles), ✅ spec-template.md (requirements alignment), ✅ tasks-template.md (task categorization)
+Follow-up TODOs: None
+-->
+
+# AIBOOK Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Security First
+No hardcoded credentials; all secrets must be managed via environment variables (e.g., .env files). Security is the top priority in all implementations and deployments.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Source of Truth
+Deployed Docusaurus content serves as the single source of truth for RAG (Retrieval Augmented Generation) knowledge. All AI responses must be grounded in this verified content.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Modularity
+Separate Python files must be maintained for FastAPI, Cohere, Qdrant, and Agent logic. Each component should be modular, well-defined, and independently testable.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### RAG Protocol Compliance
+LLM responses must be strictly grounded in retrieved book context. No hallucinations or responses outside the provided document corpus are acceptable.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Testing Excellence
+Minimum 80% test coverage is required for all RAG and API modules. Comprehensive testing ensures reliability and correctness of the system.
 
-### [PRINCIPLE_6_NAME]
+### Naming Conventions
+React components use PascalCase. Python functions use snake_case and must include type hints for improved maintainability and clarity.
 
+## Technical Standards
 
-[PRINCIPLE__DESCRIPTION]
+### Stack Requirements
+Technology stack: Docusaurus (Frontend), FastAPI (Backend), OpenAI Agent SDK, ChatKit SDK. All implementations must align with these core technologies.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Deployment Constraints
+Frontend must deploy to GitHub Pages/Vercel. Backend must be designed for Vercel/Railway deployment using FastAPI. All deployment configurations must follow these platforms' requirements.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Vector Database and Embeddings
+Embedding generation must use Cohere for all vector generation. Vector storage must use Qdrant Cloud for the vector database. These technologies are non-negotiable for consistency and performance.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Code Quality Standards
+All Python functions must include type hints. React components must follow PascalCase naming. Code reviews must verify compliance with all constitutional principles. Complexity must be justified with clear documentation.
+
+### Review and Approval Process
+All pull requests and code reviews must verify constitutional compliance. Changes to core components require explicit approval from designated maintainers. Breaking changes must include migration plans and justification.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+All development practices must comply with this constitution. Amendments require formal documentation, team approval, and migration planning. This constitution supersedes all other development practices. All PRs and reviews must verify compliance with these principles. Use project documentation for runtime development guidance.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-15 | **Last Amended**: 2025-12-15

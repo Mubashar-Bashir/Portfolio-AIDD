@@ -1,0 +1,48 @@
+{
+  "epoch_name": "Auth_Isolation_Epoch",
+  "epoch_phase": "security-isolation",
+  "epoch_goal": "Implement secure identity management only",
+  "allowed_actions": [
+    "read",
+    "analyze",
+    "create",
+    "implement",
+    "test"
+  ],
+  "allowed_file_patterns": [
+    "auth/",
+    "security/",
+    "identity/",
+    "tokens/"
+  ],
+  "forbidden_actions": [
+    "modify_frontend",
+    "change_business_logic",
+    "refactor_ui",
+    "add_rag_features"
+  ],
+  "forbidden_file_patterns": [
+    "frontend/",
+    "rag/",
+    "business/",
+    "workflow/"
+  ],
+  "exit_conditions": [
+    "Auth system isolated and tested",
+    "All auth primitives validated",
+    "No side effects on other systems",
+    "Security tests pass"
+  ],
+  "human_approval_required": true,
+  "primitive_isolation_rules": {
+    "auth_only": true,
+    "no_side_effects": true,
+    "security_first": true
+  },
+  "validation_criteria": [
+    "Login/logout primitives work",
+    "Token handling secure",
+    "Auth guards functional",
+    "No auth logic mixed with business logic"
+  ]
+}
