@@ -208,3 +208,23 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Dependency Management
+- Framework dependencies must be version-aligned (all Docusaurus packages should be at the same version)
+- Always update related packages together to maintain compatibility
+- Run `npm install` after updates to regenerate lockfile
+- Test builds after dependency updates
+
+## Active Technologies
+- JavaScript/TypeScript (for Docusaurus and frontend), Python 3.11 (for backend services) + Docusaurus (v3.x), ChatKit SDK, FastAPI, React, Node.js, Cohere API, Qdrant Cloud (001-docusaurus-chatkit-setup)
+- Qdrant Cloud (vector database for RAG), Static file storage for Docusaurus content (001-docusaurus-chatkit-setup)
+- JavaScript/TypeScript (for Docusaurus and frontend), Python 3.11 (for backend services) + Docusaurus (v3.x), ChatKit SDK, React, Node.js (001-docusaurus-chatkit-setup)
+- N/A (frontend-only package at this level, no database required) (001-docusaurus-chatkit-setup)
+- JavaScript/TypeScript (Node.js 18+), Docusaurus v3.x + Docusaurus framework, React, Node.js, npm/yarn (002-docusaurus-demo-structure)
+- N/A (static site, no storage required for this feature) (002-docusaurus-demo-structure)
+- Node.js 18+, JavaScript/TypeScript + Docusaurus v3.x, React, Node.js, npm/yarn (002-docusaurus-demo-structure)
+- JavaScript/TypeScript (Node.js 18+), Docusaurus v3.x, React + Docusaurus (v3.x), TailwindCSS (v4.x), DaisyUI (v4.x), PostCSS, Autoprefixer (003-docusaurus-tailwind-daisyui)
+- N/A (static site, no database required for this feature) (003-docusaurus-tailwind-daisyui)
+
+## Recent Changes
+- 001-docusaurus-chatkit-setup: Added JavaScript/TypeScript (for Docusaurus and frontend), Python 3.11 (for backend services) + Docusaurus (v3.x), ChatKit SDK, FastAPI, React, Node.js, Cohere API, Qdrant Cloud

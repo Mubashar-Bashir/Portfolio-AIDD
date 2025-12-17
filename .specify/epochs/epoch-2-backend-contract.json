@@ -1,0 +1,48 @@
+{
+  "epoch_name": "Backend_Contract_Epoch",
+  "epoch_phase": "backend-isolation",
+  "epoch_goal": "Define API contracts without connecting to real services",
+  "allowed_actions": [
+    "read",
+    "analyze",
+    "create",
+    "define",
+    "mock"
+  ],
+  "allowed_file_patterns": [
+    "backend/",
+    "api/",
+    "contracts/",
+    "schemas/"
+  ],
+  "forbidden_actions": [
+    "connect",
+    "call_real_service",
+    "access_database",
+    "integrate_frontend"
+  ],
+  "forbidden_file_patterns": [
+    "frontend/",
+    "real_",
+    "live_",
+    "prod_"
+  ],
+  "exit_conditions": [
+    "All API interfaces defined",
+    "OpenAPI schemas validated",
+    "Mock servers operational",
+    "Frontend uses mocks only"
+  ],
+  "human_approval_required": true,
+  "primitive_isolation_rules": {
+    "no_real_connections": true,
+    "contract_first": true,
+    "mock_only": true
+  },
+  "validation_criteria": [
+    "All endpoints have defined schemas",
+    "No real database connections",
+    "No auth logic present",
+    "All services are mocked"
+  ]
+}

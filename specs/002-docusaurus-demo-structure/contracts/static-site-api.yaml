@@ -1,0 +1,20 @@
+# API Contract: Docusaurus Demo Static Site
+
+## Overview
+This contract defines the interface for any potential backend APIs that may be integrated with the Docusaurus static site in the future. Currently, the site operates as a pure static site with no backend dependencies.
+
+## Static Assets API
+All static assets are served directly from the built site.
+
+### Documentation Content
+- **GET** `/docs/{page}` - Retrieve documentation page content
+  - Response: HTML content for the documentation page
+  - Error codes: 404 if page not found
+
+### Static Assets
+- **GET** `/static/{asset}` - Retrieve static assets (images, CSS, JS)
+  - Response: Appropriate asset content based on file type
+  - Error codes: 404 if asset not found
+
+## Future API Extensions
+Placeholder for future API endpoints that may be added to enhance the documentation site functionality.

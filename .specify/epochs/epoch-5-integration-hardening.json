@@ -1,0 +1,46 @@
+{
+  "epoch_name": "Integration_Hardening_Epoch",
+  "epoch_phase": "integration-phase",
+  "epoch_goal": "Full system integration with optimization and security",
+  "allowed_actions": [
+    "integrate",
+    "optimize",
+    "secure",
+    "test",
+    "deploy"
+  ],
+  "allowed_file_patterns": [
+    "integration/",
+    "tests/",
+    "deployment/",
+    "security/"
+  ],
+  "forbidden_actions": [
+    "refactor_primitives",
+    "change_isolation_rules",
+    "modify_constitution"
+  ],
+  "forbidden_file_patterns": [
+    "primitive/",
+    "isolated/",
+    "experiment/"
+  ],
+  "exit_conditions": [
+    "Full integration complete",
+    "All tests pass",
+    "Performance targets met",
+    "Security audit passed"
+  ],
+  "human_approval_required": true,
+  "primitive_isolation_rules": {
+    "integration_only": true,
+    "no_primitive_changes": true,
+    "system_wide_optimization": true
+  },
+  "validation_criteria": [
+    "All components integrated",
+    "Performance benchmarks met",
+    "Security measures implemented",
+    "Monitoring in place"
+  ]
+}

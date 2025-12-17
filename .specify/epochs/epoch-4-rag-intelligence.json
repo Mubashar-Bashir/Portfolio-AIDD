@@ -1,0 +1,48 @@
+{
+  "epoch_name": "RAG_Intelligence_Epoch",
+  "epoch_phase": "intelligence-isolation",
+  "epoch_goal": "Implement RAG and intelligence features in isolation",
+  "allowed_actions": [
+    "read",
+    "analyze",
+    "create",
+    "implement",
+    "embed",
+    "retrieve"
+  ],
+  "allowed_file_patterns": [
+    "rag/",
+    "embeddings/",
+    "retrieval/",
+    "prompts/",
+    "intelligence/"
+  ],
+  "forbidden_actions": [
+    "modify_auth",
+    "change_ui",
+    "alter_api_contracts"
+  ],
+  "forbidden_file_patterns": [
+    "auth/",
+    "frontend/",
+    "legacy/"
+  ],
+  "exit_conditions": [
+    "Embeddings working reliably",
+    "Retrieval functional",
+    "Prompt templates validated",
+    "No interference with auth/other systems"
+  ],
+  "human_approval_required": true,
+  "primitive_isolation_rules": {
+    "intelligence_only": true,
+    "no_cross_contamination": true,
+    "data_privacy_compliant": true
+  },
+  "validation_criteria": [
+    "Embeddings generated correctly",
+    "Retrieval accuracy meets threshold",
+    "Prompts safe and effective",
+    "No privacy leaks"
+  ]
+}

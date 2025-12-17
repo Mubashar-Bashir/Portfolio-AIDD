@@ -1,0 +1,45 @@
+{
+  "epoch_name": "Frontend_Stability_Epoch",
+  "epoch_phase": "frontend-isolation",
+  "epoch_goal": "Establish stable frontend primitives with no external dependencies",
+  "allowed_actions": [
+    "read",
+    "analyze",
+    "create",
+    "modify"
+  ],
+  "allowed_file_patterns": [
+    "frontend/",
+    "docs/",
+    "static/"
+  ],
+  "forbidden_actions": [
+    "write",
+    "modify",
+    "access"
+  ],
+  "forbidden_file_patterns": [
+    "backend/",
+    "api/",
+    "auth/",
+    "integration/"
+  ],
+  "exit_conditions": [
+    "Build never fails",
+    "No runtime errors",
+    "Visual output stable",
+    "All frontend tests pass"
+  ],
+  "human_approval_required": true,
+  "primitive_isolation_rules": {
+    "no_external_deps": true,
+    "test_alone": true,
+    "immutable_after_acceptance": true
+  },
+  "validation_criteria": [
+    "All components use hardcoded data",
+    "No API calls present",
+    "No auth logic present",
+    "No state management beyond local state"
+  ]
+}
