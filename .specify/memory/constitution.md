@@ -30,6 +30,9 @@ Minimum 80% test coverage is required for all RAG and API modules. Comprehensive
 ### Naming Conventions
 React components use PascalCase. Python functions use snake_case and must include type hints for improved maintainability and clarity.
 
+### Tailwind CSS Best Practices
+Use Tailwind utility classes directly in JSX/TSX components via className props. Avoid @apply directives in plain CSS files that are not processed by Tailwind's build pipeline. For animations and complex CSS not expressible in Tailwind, use dedicated CSS files with clear documentation.
+
 ## Technical Standards
 
 ### Stack Requirements
@@ -41,16 +44,19 @@ Frontend must deploy to GitHub Pages/Vercel. Backend must be designed for Vercel
 ### Vector Database and Embeddings
 Embedding generation must use Cohere for all vector generation. Vector storage must use Qdrant Cloud for the vector database. These technologies are non-negotiable for consistency and performance.
 
+### Frontend Styling Standards
+All Tailwind utility classes must be applied directly in JSX/TSX components. CSS files containing @apply directives must be processed through Tailwind's build pipeline. Animations and keyframes that can't be expressed in Tailwind should be in dedicated CSS files with proper configuration.
+
 ## Development Workflow
 
 ### Code Quality Standards
-All Python functions must include type hints. React components must follow PascalCase naming. Code reviews must verify compliance with all constitutional principles. Complexity must be justified with clear documentation.
+All Python functions must include type hints. React components must follow PascalCase naming. All Tailwind classes must be applied inline in JSX components. Code reviews must verify compliance with all constitutional principles. Complexity must be justified with clear documentation.
 
 ### Review and Approval Process
-All pull requests and code reviews must verify constitutional compliance. Changes to core components require explicit approval from designated maintainers. Breaking changes must include migration plans and justification.
+All pull requests and code reviews must verify constitutional compliance. Changes to core components require explicit approval from designated maintainers. Breaking changes must include migration plans and justification. All CSS changes must be reviewed for proper Tailwind usage.
 
 ## Governance
 
 All development practices must comply with this constitution. Amendments require formal documentation, team approval, and migration planning. This constitution supersedes all other development practices. All PRs and reviews must verify compliance with these principles. Use project documentation for runtime development guidance.
 
-**Version**: 1.0.0 | **Ratified**: 2025-12-15 | **Last Amended**: 2025-12-15
+**Version**: 1.1.0 | **Ratified**: 2025-12-15 | **Last Amended**: 2025-12-18
