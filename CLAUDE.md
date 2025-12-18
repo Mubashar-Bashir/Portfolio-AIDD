@@ -225,6 +225,10 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Node.js 18+, JavaScript/TypeScript + Docusaurus v3.x, React, Node.js, npm/yarn (002-docusaurus-demo-structure)
 - JavaScript/TypeScript (Node.js 18+), Docusaurus v3.x, React + Docusaurus (v3.x), TailwindCSS (v4.x), DaisyUI (v4.x), PostCSS, Autoprefixer (003-docusaurus-tailwind-daisyui)
 - N/A (static site, no database required for this feature) (003-docusaurus-tailwind-daisyui)
+- JavaScript/TypeScript (React 18.x) + React, Docusaurus, TailwindCSS, DaisyUI (001-floating-chat)
+- N/A (UI-only component with no persistent storage) (001-floating-chat)
+- JavaScript/TypeScript (React 18.x) - Required by Docusaurus framework and project constitution + React, Docusaurus, ChatKit SDK, TailwindCSS, DaisyUI - Aligned with project constitution stack (001-floating-chat)
+- N/A - UI-only implementation with no persistent storage requirements (001-floating-chat)
 
 ## Recent Changes
 - 001-docusaurus-chatkit-setup: Added JavaScript/TypeScript (for Docusaurus and frontend), Python 3.11 (for backend services) + Docusaurus (v3.x), ChatKit SDK, FastAPI, React, Node.js, Cohere API, Qdrant Cloud
